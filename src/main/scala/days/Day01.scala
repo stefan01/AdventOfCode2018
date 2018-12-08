@@ -2,7 +2,7 @@ package days
 
 object Day01 extends Day {
   def part1(input: Iterator[String]) = {
-    val result = input.map(_.toInt).reduce(_ + _)
+    val result = input.map(_.toInt).sum
     println("Resulting frequency is: " + result)
   }
 
@@ -29,9 +29,4 @@ object Day01 extends Day {
 
     println("First double frequency is: " + firstDoubleValue.get._1)
   }
-
-  def frequencyAt(input: Stream[Int], l: Int) = {
-    input.take(l).reduce(_ + _)
-  }
-
 }
